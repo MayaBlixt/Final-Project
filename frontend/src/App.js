@@ -1,9 +1,10 @@
 import React from 'react'
+import { Memory } from './components/Memory'
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Memory/>
     </div>
   )
 }
