@@ -2,14 +2,14 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
     gameoption: {
-        level:null,
+        level: null,
       
     },
 };
 
 export const game = createSlice ({
-    name:'user',
-    intitialState: initialState,
+    name:'game',
+    initialState: initialState,
     reducers: {
         setGameLevel: (state,action) => {
             const { level } = action.payload;
