@@ -2,12 +2,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { game } from '../reducers/game';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 
 export const Restart = () =>{
     const dispatch = useDispatch();
-    const level = useSelector((store) => store.game.gameoption.level)
 
     const updateGameLevel = (userlevel) => {
 		const gamelevel = JSON.stringify(userlevel);
@@ -16,7 +15,7 @@ export const Restart = () =>{
 	};
 
     return (
-        <button onClick={() => updateGameLevel(null)}>Start over</button>
+        <Button onClick={() => updateGameLevel(null)}>Start over</Button>
 
     )
 };

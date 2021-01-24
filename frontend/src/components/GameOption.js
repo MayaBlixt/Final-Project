@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { game } from '../reducers/game';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 export const GameOption = () => {
     const dispatch = useDispatch();
-    const level = useSelector((store) => store.game.gameoption.level)
 
     const updateGameLevel = (userlevel) => {
 		const gamelevel = JSON.stringify(userlevel);

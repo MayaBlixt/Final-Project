@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { game } from '../reducers/game';
 import { useSelector } from 'react-redux';
 
 import { Restart} from './Restart'
 import { GameOption } from './GameOption'
+import { NewGame } from './NewGame'
 
 
 export const Memory = () => {
@@ -21,6 +21,7 @@ export const Memory = () => {
     return (
         <Container>
             <Title> Welcome to the Memory Game</Title>
+            <NewGame/>
             <Restart/>
         </Container>
     );
