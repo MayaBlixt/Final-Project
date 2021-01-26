@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
+import { Card } from './Card';
+
 export const NewGame = () => {
     
     const cardColors = [
@@ -53,17 +55,52 @@ export const NewGame = () => {
       }, [board])
 
     if (flippedIndexes.length === 2) {
-        // Runs if two cards have been flipped
-     }
+        const match = board[flippedIndexes[0]].colorId === board[flippedIndexes[1]].colorId
+
+  if (match) {
+    const newGame = [...board]
+    newGame[flippedIndexes[0]].flipped = true
+    newGame[flippedIndexes[1]].flipped = true
+    setBoard(newGame)
+
+    const newIndexes = [...flippedIndexes]
+    newIndexes.push(false)
+    setFlippedIndexes(newIndexes)
+  } else {
+    const newIndexes = [...flippedIndexes]
+    newIndexes.push(true)
+    setFlippedIndexes(newIndexes)
+  }
+}
 
      //Add Lottie animation here
 
      if(board.length === 0) return <div>loading...</div>
 
-    else{
+     else {
+        return (
+          <CardsContainer>
+            {board.map((card, index) => (
+              <div className="card" key={index}>
+                <Card
+                  id={index}
+                  color={card.color}
+                  board={board}
+                  flippedCount={flippedCount}
+                  setFlippedCount={setFlippedCount}
+                  flippedIndexes={flippedIndexes}
+                  setFlippedIndexes={setFlippedIndexes}
+                />
+              </div>
+            ))}
+          </CardsContainer>
+        )
+      }
+    };
 
-    }
-     
-    
-
-};
+    const CardsContainer = styled.div`
+        width: 1060px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+`;

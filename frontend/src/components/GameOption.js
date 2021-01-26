@@ -22,23 +22,17 @@ export const GameOption = () => {
     )
 }
 const Title = styled.h2`
-  font-size: 1.5em;
-  text-align: center;
-  color: black
+    font-size: 1.5em;
+    text-align: center;
+    color: black
 `;
 const Button = styled.button`
-	display: block;
-	margin: 30px 0;
-	height: 30px;
-	width: 150px;
-	border-radius: 50px;
-	background: pink;
-	border-top: 1px solid rgba(255, 255, 255, 0.2);
-	font-size: 18px;
-	font-weight: bold;
-	color: ;
-	&:hover {
-		background: lightgreen;
-		cursor: pointer;
-	}
+    background: #00ad9f;
+    border-radius: 4px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    padding: 7px 15px;
+    margin-left: 8px;
+    cursor: pointer;
 `;

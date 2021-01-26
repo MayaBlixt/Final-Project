@@ -28,10 +28,12 @@ export const Memory = () => {
 };
 
 const Container = styled.div`
-	display: absolute;
-	justify-content: center;
-	align-items: center;
-	margin: 250px;
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 `;
 const Title = styled.h2`
   font-size: 1.5em;
