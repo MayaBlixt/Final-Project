@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { Restart} from './Restart'
 import { GameOption } from './GameOption'
 import { NewGame } from './NewGame'
+import { GameDetails } from './GameDetails'
 
 
 export const Memory = () => {
@@ -12,31 +13,44 @@ export const Memory = () => {
     const level = useSelector((store) => store.game.gameoption.level)
     if (level === null) { 
         return (
-                <Container>
+                <GameOptionContainer>
                    <GameOption/>
-                </Container>
+                </GameOptionContainer>
         );
     };
 
     return (
-        <Container>
-            <Title> Welcome to the Memory Game</Title>
+        <MemoryContainer>
+            <MemoryTitle> Memory Game</MemoryTitle>
+            <GameDetails/>  
             <NewGame/>
-            <Restart/>
-        </Container>
+            <Restart/> 
+        </MemoryContainer>
     );
 };
 
-const Container = styled.div`
+const MemoryContainer = styled.div`
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+`;
+const GameOptionContainer = styled.div`
     width: 1060px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 `;
-const Title = styled.h2`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+const MemoryTitle = styled.h2`
+    margin-top: 140px;
+    font-size: 60px;
+    text-align: center;
+    color:#C60303;
+    font-family: 'Rye', cursive;
+   
 `;

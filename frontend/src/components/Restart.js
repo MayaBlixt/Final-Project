@@ -15,24 +15,25 @@ export const Restart = () =>{
 	};
 
     return (
-        <Button onClick={() => updateGameLevel(null)}>Start over</Button>
+        <Button onClick={() => updateGameLevel(null)}> Restart game </Button>
 
     )
 };
 
 const Button = styled.button`
     display: block;
-    margin: 30px 0;
-    height: 30px;
-    width: 150px;
+    margin: 30px;
+    height: 50px;
+    width: 220px;
+    background:#C60303;
+    font-family: 'Rye', cursive;
     border-radius: 50px;
-    background: pink;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 18px;
+    
+    font-size: 20px;
     font-weight: bold;
-    color: ;
+    color: white;
     &:hover {
-        background: lightgreen;
+        background: red;
         cursor: pointer;
 }
 `;
