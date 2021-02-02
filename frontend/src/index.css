@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-image: url("Background.jpeg");
+  background-image: url("./assets/Background.jpeg");
   background-color: #F8D07B;
   background-repeat: no-repeat; 
   background-size: cover;
@@ -41,7 +41,7 @@ code {
 .front,
 .back {
   background-size: cover;
-  background-image: url("Back.jpeg");
+  background-image: url("./assets/Back.jpeg");
 }
 
 .card:hover {
