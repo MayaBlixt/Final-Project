@@ -40,17 +40,19 @@ export const GameOption = () => {
                 <Button onClick={() => updateGameLevel(24)}>Hard</Button></Container>
                 </Form>
              </>}
-        {loadingState && <> <
-            lottie-player
-            autoplay
-            loop
-            mode="normal"
-            src={'https://assets3.lottiefiles.com/temporary_files/jzVfLn.json'}
-            style={{ height: 300 }}
-          /></>}
+        
         </>
     )
 }
+/*{loadingState && <> <
+    lottie-player
+    autoplay
+    loop
+    mode="normal"
+    src={'https://assets3.lottiefiles.com/temporary_files/jzVfLn.json'}
+    style={{ height: 300 }}
+  /></>}*/
+
 const Title = styled.h1`
     font-size: 1.5em;
     text-align: center;

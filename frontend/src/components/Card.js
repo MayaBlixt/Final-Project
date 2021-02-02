@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components' 
 import { useSpring, animated as a } from "react-spring";
 
 

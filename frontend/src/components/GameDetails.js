@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { game } from '../reducers/game';
 
 export const GameDetails = () => {
 

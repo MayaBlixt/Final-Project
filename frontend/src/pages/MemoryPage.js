@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
-import { Restart} from './Restart'
-import { GameOption } from './GameOption'
-import { NewGame } from './NewGame'
-import { GameDetails } from './GameDetails'
+import { Restart} from '../components/Restart'
+import { GameOption } from '../components/GameOption'
+import { NewGame } from '../components/NewGame'
+import { GameDetails } from '../components/GameDetails'
 
 
-export const Memory = () => {
+export const MemoryPage = () => {
 
     const level = useSelector((store) => store.game.gameoption.level)
     if (level === null) { 
