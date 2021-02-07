@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+
 
 import { Card } from './Card';
 import memory1 from "../assets/Memory1.png";
@@ -15,6 +15,10 @@ import memory9 from "../assets/Memory9.png";
 import memory10 from "../assets/Memory10.png";
 import memory11 from "../assets/Memory11.png";
 import memory12 from "../assets/Memory12.png";
+import {
+  CardsContainer
+} from '../components/StyledComponents';
+
 
 
 export const NewGame = () => {
@@ -37,6 +41,7 @@ export const NewGame = () => {
     const [board, setBoard] = useState([])
     const [flippedCount, setFlippedCount] = useState(0)
     const [flippedIndexes, setFlippedIndexes] = useState([])
+  
 
     useEffect (() => {
       //Create a new array with the number of cards depending on set level and that gives 2 cards the same color 
@@ -49,14 +54,12 @@ export const NewGame = () => {
                 color: cardColors[i],
                 flipped:false, 
             }
-            console.log(firstCard)
             const secondCard = {
                 id: 2 * i + 1,
                 colorId: i,
                 color: cardColors[i],
                 flipped: false,
             }
-            console.log(secondCard)
         
         game.push(firstCard);
         game.push(secondCard);
@@ -67,11 +70,13 @@ export const NewGame = () => {
     
     useEffect(() => {
         // Loads when the variables in the board changes
-      }, [board])
 
+      }, [board])
+     
     if (flippedIndexes.length === 2) {
         //Runs if 2 cards have been matched 
         const match = board[flippedIndexes[0]].colorId === board[flippedIndexes[1]].colorId
+       
 
     if (match) {
         const newGame = [...board]
@@ -79,13 +84,15 @@ export const NewGame = () => {
         newGame[flippedIndexes[1]].flipped = true
         setBoard(newGame)
 
+
         const newIndexes = [...flippedIndexes]
         newIndexes.push(false)
-        setFlippedIndexes(newIndexes)
+      
     } else {
         const newIndexes = [...flippedIndexes]
         newIndexes.push(true)
         setFlippedIndexes(newIndexes)
+      
     }
 }
 
@@ -114,12 +121,4 @@ export const NewGame = () => {
       }
     };
 
-    const CardsContainer = styled.div`
-        width: 1060px;
-        height: auto;
-        margin: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-`;
+   

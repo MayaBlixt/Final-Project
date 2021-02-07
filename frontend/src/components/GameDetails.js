@@ -1,29 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
+
+import {
+    Text,
+    DetailsContainer
+} from '../components/StyledComponents';
 
 export const GameDetails = () => {
 
+//Hämta värdet Score from the store + sätta score i newgame
     return (
         <>
-         <Container>
+         <DetailsContainer>
             <Text>User:  </Text>
             <Text>Time:  </Text>
             <Text>Score:  </Text>
-        </Container> 
+        </DetailsContainer> 
         </>
     )
 };
-const Container = styled.div`
-    width: 1060px;
-    hight: 60x;
-    margin: 0 auto;
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.9);
-    justify-content: space-around;
-    border-radius: 30px;
-`;
-const Text = styled.p`
-    font-size: 25px;
-    text-align: center;
-    font-family: 'Rye', cursive;
-`;

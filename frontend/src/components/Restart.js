@@ -1,9 +1,12 @@
 
 import React from 'react';
-import styled from 'styled-components';
 import { game } from '../reducers/game';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
+import {
+    Button
+} from '../components/StyledComponents';
 
 export const Restart = () =>{
     const dispatch = useDispatch();
@@ -15,25 +18,16 @@ export const Restart = () =>{
 	};
 
     return (
-        <Button onClick={() => updateGameLevel(null)}> Restart game </Button>
+        <>
+        <Link to="/memory"> <Button onClick={() => updateGameLevel(null)}> Restart game </Button> </Link>
+        <Link to="/"> <Button onClick={() => updateGameLevel(null)}> Back to main page </Button> </Link>
+       </>
 
     )
 };
 
-const Button = styled.button`
+/*const Button = styled.button`
     display: block;
-    margin: 30px;
-    height: 50px;
-    width: 220px;
-    background:#C60303;
-    font-family: 'Rye', cursive;
-    border-radius: 50px;
-    
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    &:hover {
-        background: red;
-        cursor: pointer;
-}
-`;
+
+
+`; */

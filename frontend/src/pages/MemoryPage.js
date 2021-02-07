@@ -1,12 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 import { Restart} from '../components/Restart'
 import { GameOption } from '../components/GameOption'
 import { NewGame } from '../components/NewGame'
 import { GameDetails } from '../components/GameDetails'
-
+import {
+    H1Title,
+    GameOptionContainer,
+    MemoryContainer
+} from '../components/StyledComponents';
 
 export const MemoryPage = () => {
 
@@ -21,7 +24,7 @@ export const MemoryPage = () => {
 
     return (
         <MemoryContainer>
-            <MemoryTitle> Memory Game</MemoryTitle>
+            <H1Title> Memory Game</H1Title>
             <GameDetails/>  
             <NewGame/>
             <Restart/> 
@@ -29,28 +32,4 @@ export const MemoryPage = () => {
     );
 };
 
-const MemoryContainer = styled.div`
-    width: 1060px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-`;
-const GameOptionContainer = styled.div`
-    width: 1060px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-`;
-const MemoryTitle = styled.h2`
-    margin-top: 140px;
-    font-size: 60px;
-    text-align: center;
-    color:#C60303;
-    font-family: 'Rye', cursive;
-   
-`;
+
