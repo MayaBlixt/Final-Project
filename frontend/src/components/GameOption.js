@@ -23,13 +23,13 @@ export const GameOption = () => {
 		dispatch(game.actions.setUser({ username: player}));
         setChooseLevel(true);
     }
-   
+   */
     const updateGameLevel = (userlevel) => {
 		const gamelevel = JSON.stringify(userlevel);
 		dispatch(game.actions.setGameLevel({ level: gamelevel}));
         console.log(`Gamelevel ${gamelevel}`);
         setLoadingstate(true);
-    }; */
+    };
     
     
    /* if(!loadingState){
@@ -57,16 +57,21 @@ export const GameOption = () => {
              </>
             }
         
-            {chooseLevel && <Container>
+            {chooseLevel && 
+                */
+               return (
+                <Container>
                 <Button onClick={() => updateGameLevel(12)}>Easy </Button>
                 <Button onClick={() => updateGameLevel(18)}>Medium</Button>
                 <Button onClick={() => updateGameLevel(24)}>Hard</Button>
-            </Container>}
+            </Container>
+               )  /*  
+        }
             </>
              
              
         )
-    }else { */
+    }else { 
 		    return (
                 <>
               <loading></loading>
@@ -76,8 +81,8 @@ export const GameOption = () => {
                 
             )
     
-        }
-//}
+        } */
+}
 /*{loadingState && <> <
     lottie-player
     autoplay

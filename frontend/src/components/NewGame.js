@@ -19,11 +19,9 @@ import {
   CardsContainer
 } from '../components/StyledComponents';
 
-
-
 export const NewGame = () => {
     
-    const cardColors = [
+    const memoryImage = [
         memory1,
         memory2,
         memory3,
@@ -44,20 +42,20 @@ export const NewGame = () => {
   
 
     useEffect (() => {
-      //Create a new array with the number of cards depending on set level and that gives 2 cards the same color 
+      //Create a new array with the number of cards depending on set level and that gives 2 cards the same image 
         const game = []
     
         for (let i =0; i< level /2; i++){
             const firstCard = {
                 id: 2 * i,
-                colorId: i,
-                color: cardColors[i],
+                imageId: i,
+                image: memoryImage[i],
                 flipped:false, 
             }
             const secondCard = {
                 id: 2 * i + 1,
-                colorId: i,
-                color: cardColors[i],
+                imageId: i,
+                image: memoryImage[i],
                 flipped: false,
             }
         
@@ -75,7 +73,7 @@ export const NewGame = () => {
      
     if (flippedIndexes.length === 2) {
         //Runs if 2 cards have been matched 
-        const match = board[flippedIndexes[0]].colorId === board[flippedIndexes[1]].colorId
+        const match = board[flippedIndexes[0]].imageId === board[flippedIndexes[1]].imageId
        
 
     if (match) {
@@ -83,11 +81,10 @@ export const NewGame = () => {
         newGame[flippedIndexes[0]].flipped = true
         newGame[flippedIndexes[1]].flipped = true
         setBoard(newGame)
-
-
         const newIndexes = [...flippedIndexes]
         newIndexes.push(false)
-      
+        setFlippedIndexes(newIndexes)
+
     } else {
         const newIndexes = [...flippedIndexes]
         newIndexes.push(true)
@@ -107,7 +104,7 @@ export const NewGame = () => {
               <div className="card" key={index}>
                 <Card
                   id={index}
-                  color={card.color}
+                  image={card.image}
                   board={board}
                   flippedCount={flippedCount}
                   setFlippedCount={setFlippedCount}

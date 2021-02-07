@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 
 export const Card = ({
   id,
-  color,
+  image,
   board,
   flippedCount,
   setFlippedCount,
@@ -34,8 +34,8 @@ export const Card = ({
   useEffect(() => {
     //flippedCount will increase if: first guess is flipped, second guess is flipped and 
     //Flippedindex will keep track of which cards that have been matched
-   /* updateScore(score + 1)*/
-    setScore(score+1);
+   
+    //setScore(score+1);
       if (flippedIndexes[2] === true && flippedIndexes.indexOf(id) > -1) {
           //If a match set flipped to false  
           setTimeout(() => {
@@ -89,7 +89,7 @@ export const Card = ({
         style={{
           opacity,
           transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-          backgroundImage: `url(${color})` 
+          backgroundImage: `url(${image})` 
         }}
       />
     </div>

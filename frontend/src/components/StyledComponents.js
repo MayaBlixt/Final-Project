@@ -118,7 +118,7 @@ export const SectionContainer = styled.div`
 /* Styling for GameDetails */
 
 export const DetailsContainer = styled(Container)`
-    padding: 30px;
+    padding: 20px;
     flex-direction:row;  
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255);
