@@ -11,7 +11,10 @@ import {
     Wrapper,
     Text,
     Image,
-    SectionContainer
+    SectionContainer,
+    Button,
+    SectionWrapper,
+    BookImage
 } from '../components/StyledComponents';
 
 export const LandingPage = () => {
@@ -20,25 +23,34 @@ export const LandingPage = () => {
     
         <LandingContainer>
             <H1Title> August & Clownen fan page </H1Title> 
-            <StyledLink to="/memory"> 
-            <BookContainer>
-               <Text>Good news! This spring the fifth August and Clownen book will be release.</Text>
-               <Image src={book}/>
-            </BookContainer>
-            </StyledLink>
             
+            <BookContainer>
+               <SectionWrapper>
+                    <Text>This spring the fifth August and Clownen book will be release.</Text>
+                    <StyledLink to="/book"> 
+                        <Button>Check out books</Button>
+                    </StyledLink>
+                </SectionWrapper>
+               <BookImage src={book}/>
+            </BookContainer> 
             <Wrapper>
                 <SectionContainer>
-                    <StyledLink to="/memory"> 
-                        <Text>Meet the August & Clownen carachters and play some Memory</Text>
-                        <Image src={memory}/>
-                    </StyledLink>
+                    <SectionWrapper>
+                        <Text>Meet the August & Clownen characters and play some Memory</Text>
+                        <StyledLink to="/memory"> 
+                            <Button>Play memory</Button>
+                        </StyledLink>
+                    </SectionWrapper>
+                    <Image src={memory}/>
                 </SectionContainer>
                 <SectionContainer>
-                    <StyledLink to="/drawings"> 
+                    <SectionWrapper>
                         <Text>Upload some August & Clownen drawings </Text>
-                        <Image src={drawing}/>
-                    </StyledLink>
+                        <StyledLink to="/drawings"> 
+                            <Button>Upload drawing</Button>
+                        </StyledLink>
+                    </SectionWrapper>
+                    <Image src={drawing}/>
                 </SectionContainer>
             </Wrapper>
             
