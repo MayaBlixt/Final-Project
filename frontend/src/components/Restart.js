@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import {
-    Button
+    Button,
+    RestartWrapper
 } from '../components/StyledComponents';
 
 export const Restart = () =>{
@@ -18,10 +19,10 @@ export const Restart = () =>{
 	};
 
     return (
-        <>
-        <Link to="/memory"> <Button onClick={() => updateGameLevel(null)}> Restart game </Button> </Link>
-        <Link to="/"> <Button onClick={() => updateGameLevel(null)}> Back to main page </Button> </Link>
-       </>
+        <RestartWrapper>
+            <Link to="/memory"> <Button onClick={() => updateGameLevel(null)}> Restart game </Button> </Link>
+            <Link to="/"> <Button onClick={() => updateGameLevel(null)}> Back to main page </Button> </Link>
+        </RestartWrapper>
 
     )
 };

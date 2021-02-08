@@ -2,6 +2,7 @@ import React from 'react'
 
 import {
     Text,
+    WIPText,
     DetailsContainer
 } from '../components/StyledComponents';
 
@@ -11,9 +12,8 @@ export const GameDetails = () => {
     return (
         <>
          <DetailsContainer>
-            <Text>User:  </Text>
-            <Text>Time:  </Text>
-            <Text>Score:  </Text>
+            <WIPText>Welcome ${} !</WIPText>
+            <WIPText>Your score is:  </WIPText>
         </DetailsContainer> 
         </>
     )

@@ -3,9 +3,10 @@ import { game } from '../reducers/game';
 import { useDispatch } from 'react-redux';
 import "@lottiefiles/lottie-player";
 
-
+import cannon from "../assets/Cannon.png";
+import tent from "../assets/Trapets.png";
 import {
-    H2Title,
+    GameImage,
     Button,
     Form,
     InputLabel,
@@ -40,29 +41,32 @@ export const GameOption = () => {
     return (
          <>
         {!chooseLevel && 
-                
+                <WIPContainer>
                 <Form onSubmit = {setUser}>
-                    <H2Title>Start playing Memory</H2Title>
-                    <WIPText>Choose a username to start playing the August & Clownen Memory game. </WIPText>
+                    <WIPText> Pick a username to start playing </WIPText>
+                    <GameImage src={cannon}/>
 				    <InputLabel> Username:</InputLabel>
 				    <UserInput
 						required
 						type="text"
                         name="select-username"
+                        placeholder="enter a username"
                         value={name}
                         onChange={(event) => setName(event.target.value)}
 						minLength="5"
 						maxLength="30"
 					/>
 				
-                <Button type="submit"> Choose username</Button>
+                <Button type="submit"> Start playing</Button>
                 </Form>
+                </WIPContainer>
             
              
         }
         {chooseLevel && 
                 <WIPContainer>
-                    <WIPText>And a difficulty level to play memory </WIPText>
+                    <WIPText>... and pick a difficulty level </WIPText>
+                    <GameImage src={tent}/>
                     <Button onClick={() => updateGameLevel(12)}>Easy </Button>
                     <Button onClick={() => updateGameLevel(18)}>Medium</Button>
                     <Button onClick={() => updateGameLevel(24)}>Hard</Button>

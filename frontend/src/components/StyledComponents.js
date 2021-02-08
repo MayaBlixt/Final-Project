@@ -34,7 +34,7 @@ export const H2Title = styled.h2`
 export const Text = styled.p`
     font-size: 20px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rye', cursive;
 
 `;
 
@@ -175,13 +175,14 @@ export const DetailsContainer = styled(Container)`
     flex-direction:row;  
     margin-bottom: 20px;
     background-color:${white};
+    justify-content: space-evenly;
     
 `;
 
 /* Styling for GameOption */
 
 export const Form = styled.form`
-  width: 40%;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,32 +200,43 @@ export const Form = styled.form`
 `;
 
 export const UserInput = styled.input`
-  width: 80%;
-  height: 40px;
-  margin-bottom: 15px;
-  border-radius: 20px;
-  font-size: 20px;
-  text-align: center;
-  border: none;
-  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
-  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+    width: 250px;
+    height: 55px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-family: 'Rye', cursive;
+    text-align: center;
+    border: none;
+    -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
+    box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
 `;
 
 export const InputLabel = styled.label`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', sans-serif;
-  color: rgb(64,137,204);
-  font-weight: 500;
-  font-size: 25px;
-  border-radius: 20px;
-  margin: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-family: 'Rye', cursive;
+    font-size: 22px;
+    color:${black};
+    font-weight: 500;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top:40px;
 `;
 
 export const Label = styled.label`
 	font-size: 13px;
+`;
+
+export const GameImage = styled(Image)`
+    width: 300px;
+    opacity: 1
+    transition: 0.3s;
+    &:hover {
+        opacity: 0.6;
+    } 
+
 `;
 
 /* Styling for NewGame */
@@ -237,4 +249,8 @@ export const CardsContainer = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+`;
+
+export const RestartWrapper = styled.div`
+flex-direction:row;
 `;
