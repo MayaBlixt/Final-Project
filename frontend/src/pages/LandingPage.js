@@ -3,6 +3,10 @@ import React from 'react'
 import book from "../assets/Book_img.png";
 import memory from "../assets/Memory_img.png";
 import drawing from "../assets/Memory1.png";
+import highscore from "../assets/Memory2.png";
+import trapets from "../assets/Trapets.png";
+
+
 import { Footer } from '../components/Footer'
 
 import {
@@ -16,7 +20,8 @@ import {
     SectionContainer,
     Button,
     SectionWrapper,
-    BookImage
+    BookImage,
+    H2Title
 } from '../components/StyledComponents';
 
 export const LandingPage = () => {
@@ -28,6 +33,7 @@ export const LandingPage = () => {
             
             <BookContainer>
                <SectionWrapper>
+                    <H2Title>New book release</H2Title>
                     <Text>This spring the fifth August and Clownen book will be release.</Text>
                     <StyledLink to="/book"> 
                         <Button>Check out books</Button>
@@ -38,6 +44,7 @@ export const LandingPage = () => {
             <Wrapper>
                 <SectionContainer>
                     <SectionWrapper>
+                        <H2Title>Memory game</H2Title>
                         <Text>Meet the August & Clownen characters and play some Memory</Text>
                         <StyledLink to="/memory"> 
                             <Button>Play memory</Button>
@@ -47,15 +54,27 @@ export const LandingPage = () => {
                 </SectionContainer>
                 <SectionContainer>
                     <SectionWrapper>
-                        <Text>Upload some August & Clownen drawings </Text>
-                        <StyledLink to="/drawings"> 
-                            <Button>Upload drawing</Button>
+                        <H2Title> Game highscore</H2Title>
+                        <Text>Take a look at the memory game highscore </Text>
+                        <StyledLink to="/highscore"> 
+                            <Button>Go to highscore </Button>
                         </StyledLink>
                     </SectionWrapper>
                     <Image src={drawing}/>
                 </SectionContainer>
             </Wrapper>
+            <BookContainer>
+            <BookImage src={highscore}/>
+               <SectionWrapper>
+               <    H2Title>Share your drawings</H2Title>
+                    <Text> Show the whole world your best August & Clownen drawings. Go to the upload drawings page to make it happend </Text>
+                    <StyledLink to="/drawings"> 
+                        <Button>Upload drawing</Button>
+                    </StyledLink>
+                </SectionWrapper>
+               <Image src={trapets}/>
             <Footer/>
+            </BookContainer> 
         </LandingContainer>
         
     );

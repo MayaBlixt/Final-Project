@@ -21,20 +21,23 @@ export const H1Title = styled.h1`
     font-size: 60px;
     font-weight: 600;
     text-align: center;
-    color:${red};
+    color:${black};
     font-family: 'Rye', cursive;
 `;
 export const H2Title = styled.h2`
-    font-size: 1.5em;
+    font-size: 30px;
     text-align: center;
-    color: ${black}
+    color: ${black};
     font-family: 'Rye', cursive;
+    margin-bottom:0;
 `;
 
 export const Text = styled.p`
     font-size: 20px;
-    text-align: center;
-    font-family: 'Rye', cursive;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    margin-top:1;
 
 `;
 
@@ -85,7 +88,7 @@ export const BookContainer = styled(Container)`
     padding: 35px;
     flex-direction:row; 
     width: 950px;
-    height: 300px; 
+    height: 250px; 
     margin-bottom: 30px;
     background-color: ${white};
     
@@ -101,14 +104,13 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 160px;
-    float: left;
-    margin-right: 10px;
+    width: 140px;
     text-decoration: none;
+    padding-right: 10px;
 `;
 
 export const BookImage = styled(Image)`
-    width: 200px;
+    width: 180px;
     opacity: 1
     transition: 0.3s;
     &:hover {
