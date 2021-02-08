@@ -26,8 +26,3 @@ export const Restart = () =>{
     )
 };
 
-/*const Button = styled.button`
-    display: block;
-
-
-`; */

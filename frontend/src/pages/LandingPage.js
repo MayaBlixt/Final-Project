@@ -3,6 +3,8 @@ import React from 'react'
 import book from "../assets/Book_img.png";
 import memory from "../assets/Memory_img.png";
 import drawing from "../assets/Memory1.png";
+import { Footer } from '../components/Footer'
+
 import {
     StyledLink,
     H1Title,
@@ -53,9 +55,9 @@ export const LandingPage = () => {
                     <Image src={drawing}/>
                 </SectionContainer>
             </Wrapper>
-            
-            
+            <Footer/>
         </LandingContainer>
+        
     );
 }
 

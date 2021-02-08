@@ -9,6 +9,7 @@ import { LandingPage } from './pages/LandingPage';
 import { MemoryPage } from './pages/MemoryPage';
 import { DrawingsPage } from './pages/DrawingsPage';
 
+
 //Create reducer
 const reducer = combineReducers({ game: game.reducer });
 //Create store
@@ -17,6 +18,7 @@ const store = configureStore({ reducer });
 export const App = () => {
 
   return (
+
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
@@ -32,5 +34,6 @@ export const App = () => {
         </Switch>
       </BrowserRouter>
     </Provider>
+    
   );
 };

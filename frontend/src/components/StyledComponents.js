@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const red = '#C60303';
 const redish = '#d5483f';
 const black = '#1c2025';
+const white = '#ffffff';
 
 /* Common component styling */
 export const Container = styled.section`
@@ -64,11 +65,11 @@ export const GameOptionContainer = styled(Container)`
      margin-bottom: 10px;
 `;
 
+
 /* Styling for Landing Page */
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
-    color: black;
 
 `;
 
@@ -86,7 +87,7 @@ export const BookContainer = styled(Container)`
     width: 950px;
     height: 300px; 
     margin-bottom: 30px;
-    background-color: rgba(255, 255, 255);
+    background-color: ${white};
     
 `;
 
@@ -126,7 +127,7 @@ export const SectionContainer = styled.div`
   
     align-items: center;
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255);
+    background-color:${white};
     border-radius: 30px;
     text-decoration: none;
     cursor: pointer;
@@ -141,13 +142,39 @@ export const SectionWrapper = styled.div`
     align-items: center;
     border-radius: 30px;
 `;
+
+export const FooterContainer = styled.div`
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: ${redish};
+    color: white;
+    text-align: center;
+`;
+
+/* Styling for Drawing Page */
+
+export const WIPText = styled(Text)`
+    font-family: 'Rye', cursive;
+    font-size: 30px;
+`;
+
+export const WIPContainer = styled(BookContainer)`
+    flex-direction:column; 
+    width: 600px;
+    height:auto;
+    margin-bottom: 0;
+    margin-top: 120px;
+`;
+
 /* Styling for GameDetails */
 
 export const DetailsContainer = styled(Container)`
     padding: 20px;
     flex-direction:row;  
     margin-bottom: 20px;
-    background-color: rgba(255, 255, 255);
+    background-color:${white};
     
 `;
 
@@ -168,7 +195,6 @@ export const Form = styled.form`
 `;
 
 export const Label = styled.label`
-	color: grey;
 	font-size: 13px;
 `;
 
