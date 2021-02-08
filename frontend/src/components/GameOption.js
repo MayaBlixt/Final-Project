@@ -1,29 +1,33 @@
 import React, { useState} from 'react'
 import { game } from '../reducers/game';
 import { useDispatch } from 'react-redux';
+import "@lottiefiles/lottie-player";
 
 
 import {
     H2Title,
-    Text,
     Button,
-    Container,
     Form,
-    Label
+    InputLabel,
+    UserInput,
+    WIPContainer,
+    WIPText
 } from '../components/StyledComponents';
 
 export const GameOption = () => {
     const dispatch = useDispatch();
     const [loadingState, setLoadingstate] = useState(false);
     const [chooseLevel, setChooseLevel] = useState(false);
+    const [name, setName] = useState('');
    
     
-   /* const setUser = (username) => {
-		const player = JSON.stringify(username);
-		dispatch(game.actions.setUser({ username: player}));
+   const setUser = () => {
+		/*const player = JSON.stringify(username);
+        dispatch(game.actions.setUser({ username: player}));*/
+        console.log(`Username: ${name}`)
         setChooseLevel(true);
     }
-   */
+   
     const updateGameLevel = (userlevel) => {
 		const gamelevel = JSON.stringify(userlevel);
 		dispatch(game.actions.setGameLevel({ level: gamelevel}));
@@ -32,63 +36,48 @@ export const GameOption = () => {
     };
     
     
-   /* if(!loadingState){
+   
     return (
-        <>
-        {!chooseLevel &&
-            <> 
-                <Form>
+         <>
+        {!chooseLevel && 
+                
+                <Form onSubmit = {setUser}>
                     <H2Title>Start playing Memory</H2Title>
-                    <Text>Choose a username to start playin the August & Clownen Memory game. </Text>
-				<Label>
-				    Username:
-					<input
+                    <WIPText>Choose a username to start playing the August & Clownen Memory game. </WIPText>
+				    <InputLabel> Username:</InputLabel>
+				    <UserInput
 						required
 						type="text"
-						name="select-username"
-						value={userlevel}
-						onChange={(event) => setUser(event.target.value)}
+                        name="select-username"
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
 						minLength="5"
 						maxLength="30"
 					/>
-				</Label>
-                <Button type="submit" onClick={setUser}> </Button>
+				
+                <Button type="submit"> Choose username</Button>
                 </Form>
-             </>
-            }
-        
-            {chooseLevel && 
-                */
-               return (
-                <Container>
-                <Button onClick={() => updateGameLevel(12)}>Easy </Button>
-                <Button onClick={() => updateGameLevel(18)}>Medium</Button>
-                <Button onClick={() => updateGameLevel(24)}>Hard</Button>
-            </Container>
-               )  /*  
+            
+             
         }
-            </>
-             
-             
+        {chooseLevel && 
+                <WIPContainer>
+                    <WIPText>And a difficulty level to play memory </WIPText>
+                    <Button onClick={() => updateGameLevel(12)}>Easy </Button>
+                    <Button onClick={() => updateGameLevel(18)}>Medium</Button>
+                    <Button onClick={() => updateGameLevel(24)}>Hard</Button>
+                </WIPContainer>
+               
+            
+        }
+        {loadingState &&  <lottie-player src={"https://assets6.lottiefiles.com/packages/lf20_kYKYYG.json"}
+                                mode="bounce" 
+                                background="transparent"  
+                                speed="1"  
+                                style={{width: 300 }}  
+                                loop  
+                                autoplay/>}
+        </>
         )
-    }else { 
-		    return (
-                <>
-              <loading></loading>
-                
-      
-                </>
-                
-            )
-    
-        } */
-}
-/*{loadingState && <> <
-    lottie-player
-    autoplay
-    loop
-    mode="normal"
-    src={'https://assets3.lottiefiles.com/temporary_files/jzVfLn.json'}
-    style={{ height: 300 }}
-  /></>}*/
-
+    }
+            

@@ -181,17 +181,46 @@ export const DetailsContainer = styled(Container)`
 /* Styling for GameOption */
 
 export const Form = styled.form`
-	margin: 130px 0 0 0;
-	background: rgba(255, 255, 255, 0.8);
-	padding: 3em;
-	height: 300px;
-	border-radius: 20px;
-	border-left: 1px solid rgba(255, 255, 255, 0.8);
-	border-top: 1px solid rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(5px);
-	box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-	text-align: left;
-	position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  margin: 10px;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    background-color: rgb(207,236,243, 0.8); 
+    border-radius:16px;
+  }
+`;
+
+export const UserInput = styled.input`
+  width: 80%;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  -webkit-box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5); 
+  box-shadow: 3px 3px 23px 3px rgba(180,194,216,0.5);
+`;
+
+export const InputLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', sans-serif;
+  color: rgb(64,137,204);
+  font-weight: 500;
+  font-size: 25px;
+  border-radius: 20px;
+  margin: 10px;
 `;
 
 export const Label = styled.label`
