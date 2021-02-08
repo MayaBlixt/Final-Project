@@ -39,13 +39,13 @@ export const Text = styled.p`
 `;
 
 export const Button = styled.button`
-	width: 200px;
-	height: 50px;
+	width: 250px;
+	height: 55px;
 	border-radius: 30px;
 	margin: 10px;
 	border: 0;
 	font-family: 'Rye', cursive;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 	background-color: ${red};
     box-shadow: 3px 5px ${black};
@@ -157,7 +157,7 @@ export const FooterContainer = styled.div`
 
 export const WIPText = styled(Text)`
     font-family: 'Rye', cursive;
-    font-size: 30px;
+    font-size: 24px;
 `;
 
 export const WIPContainer = styled(BookContainer)`

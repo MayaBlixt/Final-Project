@@ -1,13 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
  
 import { game } from './reducers/game';
 
 import { LandingPage } from './pages/LandingPage';
 import { MemoryPage } from './pages/MemoryPage';
 import { DrawingsPage } from './pages/DrawingsPage';
+import { PageNotFound } from './pages/PageNotFound';
 
 
 //Create reducer
@@ -31,6 +32,10 @@ export const App = () => {
             <Route path="/drawings">
               <DrawingsPage />
             </Route>
+            <Route path="/404">
+					<PageNotFound />
+				</Route>
+				<Redirect to="/404" />
         </Switch>
       </BrowserRouter>
     </Provider>
