@@ -28,7 +28,7 @@ const Highscore = new mongoose.model("Highscore", {
   score: { type: Number },
 });
 
-// Start defining your routes here
+// List available endpoints 
 app.get('/', (req, res) => {
   res.send(listEndpoints(app));
 })
