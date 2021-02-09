@@ -18,7 +18,8 @@ app.use(cors())
 app.use(bodyParser.json())
 
 // Setting up Mongooose connection
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/8080";
+//const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/8080";
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/AugustClownen";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = Promise;
 
