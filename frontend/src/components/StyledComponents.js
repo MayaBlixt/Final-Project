@@ -256,3 +256,74 @@ export const CardsContainer = styled.div`
 export const RestartWrapper = styled.div`
 flex-direction:row;
 `;
+
+/* Styling for Highscore page */
+
+export const TotalScore = styled.span`
+	color: ${red};
+	float: right;
+	margin-left: 10px;
+	font-size: 20px;
+	font-weight: bold;
+`;
+export const FirstPlaceCirkel = styled.div`
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	background-color: ${red};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+`;
+
+
+export const FirstPlaceScore = styled(TotalScore)`
+	font-size: 24px;
+`;
+export const FirstPlace = styled.div`
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	background-color: ${red};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+`;
+
+export const FirstPlaceContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+`;
+export const HeaderScore = styled.h1`
+	font-size: 100px;
+	margin: 0;
+	padding: 0;
+	color: ${red};
+	font-weight: 900;
+	line-height: 90px;
+`;
+export const Header = styled.h1`
+	color: ${red};
+	text-align: center;
+	font-size: 30px;
+`;
+export const OrderedList = styled.ol`
+	width: 90%;
+	box-sizing: border-box;
+	font-weight: bold;
+	margin: 30px;
+`;
+export const List = styled.li`
+	color: ${red};
+	border-bottom: 0.2px solid #0b1d34;
+	padding: 15px;
+	font-size: 24px;
+	::marker {
+		color: ${red};
+		font-size: 18px;
+	}
+`;

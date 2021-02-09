@@ -12,7 +12,6 @@ import {
     InputLabel,
     UserInput,
     WIPContainer,
-    WIPText,
     H2Title
 } from '../components/StyledComponents';
 

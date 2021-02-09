@@ -1,4 +1,5 @@
 import React from 'react'
+import "@lottiefiles/lottie-player";
 
 import book from "../assets/Book_img.png";
 import memory from "../assets/Memory_img.png";
@@ -30,8 +31,13 @@ export const LandingPage = () => {
     
         <LandingContainer>
             <H1Title> August & Clownen fan page </H1Title> 
-            
             <BookContainer>
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_jR229r.json"  
+                            background="transparent"  
+                            speed="1"  
+                            style={{width: 250 }}  
+                            loop  
+                            autoplay/> 
                <SectionWrapper>
                     <H2Title>New book release</H2Title>
                     <Text>This spring the fifth August and Clownen book will be release.</Text>

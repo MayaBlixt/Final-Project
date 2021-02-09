@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { useSpring, animated as a } from "react-spring";
-import { game } from '../reducers/game';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useSpring, animated as a } from 'react-spring';
 
 export const Card = ({
   id,
@@ -15,7 +13,7 @@ export const Card = ({
 
   const [flipped, set] = useState(false)
   const [score, setScore] = useState(0)
-  const dispatch = useDispatch();
+  
   //React Spring for flipping cards
   const {transform, opacity} = useSpring({
     opacity: flipped ? 1 : 0,

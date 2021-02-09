@@ -9,6 +9,7 @@ import { LandingPage } from './pages/LandingPage';
 import { MemoryPage } from './pages/MemoryPage';
 import { DrawingsPage } from './pages/DrawingsPage';
 import { PageNotFound } from './pages/PageNotFound';
+import { HighscorePage } from './pages/HighscorePage';
 
 
 //Create reducer
@@ -31,6 +32,9 @@ export const App = () => {
             </Route>
             <Route path="/drawings">
               <DrawingsPage />
+            </Route>
+            <Route path="/highscore">
+              <HighscorePage />
             </Route>
             <Route path="/404">
 					<PageNotFound />
