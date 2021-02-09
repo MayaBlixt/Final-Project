@@ -5,6 +5,21 @@ import mongoose from "mongoose";
 import listEndpoints from 'express-list-endpoints';
 
 
+// Setting up Mongooose connection
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/AugustClownen";
+mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.Promise = Promise;
+
+// Mongoose model for storing highscore
+const Highscore = mongoose.model("Highscore", {
+  name: { 
+    type: String 
+  },
+  score: { 
+    type: Number 
+  },
+});
+
 
 // Defines the port the app will run on. Defaults to 8080, but can be 
 // overridden when starting the server. For example:
@@ -17,17 +32,6 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-// Setting up Mongooose connection
-//const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/8080";
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/AugustClownen";
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.Promise = Promise;
-
-// Mongoose model for storing highscore
-const Highscore = new mongoose.model("Highscore", {
-  name: { type: String },
-  score: { type: Number },
-});
 
 // List available endpoints 
 app.get('/', (req, res) => {
@@ -44,7 +48,7 @@ app.listen(port, () => {
 app.get("/highscore", async (req, res) => {
   try {
     const highscore = await Highscore.find()
-      .sort({ score: "desc" })
+      //.sort({ score: "desc" })
       .limit(10)
       .exec();
     res.json(highscore);
