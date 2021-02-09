@@ -5,3 +5,8 @@ This project includes the packages and babel setup for an express server, and is
 ## Getting started
 
 Install dependencies with `npm install`, then start the server by running `npm run dev`
+
+## Viewing it live
+
+Frontend: https://august-clownen-fanpage.netlify.app/
+Backend: https://august-clownen-fanpage-api.herokuapp.com/

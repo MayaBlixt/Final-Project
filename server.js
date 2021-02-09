@@ -1,20 +1,18 @@
-import express from 'express'
-import bodyParser from 'body-parser'
-import cors from 'cors'
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 import mongoose from "mongoose";
-import listEndpoints from 'express-list-endpoints';
-
 
 // Defines the port the app will run on. Defaults to 8080, but can be 
 // overridden when starting the server. For example:
 //
 //   PORT=9000 npm start
-const port = process.env.PORT || 8080
-const app = express()
+const port = process.env.PORT || 8080;
+const app = express();
 
 // Add middlewares to enable cors and json body parsing
-app.use(cors())
-app.use(bodyParser.json())
+app.use(cors());
+app.use(bodyParser.json());
 
 // Setting up Mongooose connection
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/8080";
@@ -29,7 +27,7 @@ const Highscore = new mongoose.model("Highscore", {
 
 // Start defining your routes here
 app.get('/', (req, res) => {
-  res.send(listEndpoints(app))
+  res.send('Hello world');
 })
 
 // Start the server
@@ -37,7 +35,7 @@ app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
 })
 
-
+/*
 //get highscore
 app.get("/highscore", async (req, res) => {
   try {
@@ -69,4 +67,4 @@ app.post("/highscore", async (req, res) => {
       errors: err.errors,
     });
   }
-});
+});*/
