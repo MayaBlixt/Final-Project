@@ -9,4 +9,4 @@ Install dependencies with `npm install`, then start the server by running `npm r
 ## Viewing it live
 
 Frontend: https://august-clownen-fanpage.netlify.app/
-Backend: https://august-clownen-fanpage-api.herokuapp.com/
+Backend: https://august-clowen-fanpage.herokuapp.com/
