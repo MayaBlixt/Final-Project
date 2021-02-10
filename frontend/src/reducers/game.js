@@ -7,7 +7,7 @@ const initialState = {
     },
     highscore: [],
     guestScore: 0,
-    userName:localStorage.userName || "",
+    username:localStorage.username || "",
     score: localStorage.score || 0
 
 };
@@ -21,10 +21,12 @@ export const game = createSlice ({
             console.log(`Choosen gamelevel :${level}`);
             state.gameoption.level= level;
         },
-        setUserName: (store, action) => {
-            const { userName } = action.payload;
-            store.userName = userName;
-            localStorage.setItem("userName", userName);
+        setusername: (store, action) => {
+            const { user } = action.payload;
+            store.username = user;
+            console.log(`Username in store:${user}`);
+            localStorage.setItem("username", user);
+        
           },
         setGuestScore: (store,action) => {
             const { score } = action.payload;
@@ -58,19 +60,19 @@ export const fetchHighscore = () => {
     fetch("", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: name, score: score }),
+      body: JSON.stringify({ username: name, score: score }),
     })
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
       });
   };
-  export const postScore = (userName, scoreNumber) => {
+  export const postScore = (username, scoreNumber) => {
     return (dispatch) => {
     fetch("", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userName: userName, scoreNumber: scoreNumber }),
+      body: JSON.stringify({ username: username, score: scoreNumber }),
     })
       .then((res) => res.json())
       .then((score) => {

@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import { game } from '../reducers/game';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import "@lottiefiles/lottie-player";
 
 import cannon from "../assets/Cannon.png";
@@ -25,6 +26,7 @@ export const GameOption = () => {
    const setUser = () => {
 		/*const player = JSON.stringify(username);
         dispatch(game.actions.setUser({ username: player}));*/
+        dispatch(game.actions.setusername({ username: name }));
         console.log(`Username: ${name}`)
         setChooseLevel(true);
     }
