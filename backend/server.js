@@ -6,7 +6,7 @@ import listEndpoints from 'express-list-endpoints';
 
 
 // Setting up Mongooose connection
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/AugustClownen";
+const mongoUrl = process.env.MONGO_URL || "mongodb+srv://myDBuser:JVX2vj1t8L36NkNf@cluster0.bfng5.mongodb.net/AugustClownen?retryWrites=true&w=majority";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = Promise;
 
