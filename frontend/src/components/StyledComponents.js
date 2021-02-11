@@ -16,6 +16,7 @@ export const Container = styled.section`
     border-radius: 30px;
 `;
 
+
 export const H1Title = styled.h1`
     margin-top: 90px;
     margin-bottom: 40px;
@@ -31,6 +32,10 @@ export const H1Title = styled.h1`
       @media (min-width: 669px) and (max-width: 1023px) {
         margin-bottom: 45px;
       };
+`;
+export const Title = styled(H1Title)`
+    margin-top: 70px;
+
 `;
 export const H2Title = styled.h2`
     font-size: 24px;
@@ -57,9 +62,9 @@ export const H3Title = styled.h3`
 
 export const Text = styled.p`
     font-size: 14px;
-    text-align: justify;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-weight:500;
+    font-weight:600;
     margin-top:1;
     @media (max-width: 668px) {
         font-size: 22px;
@@ -68,7 +73,6 @@ export const Text = styled.p`
       @media (min-width: 669px) and (max-width: 1023px) {
         margin-bottom: 18px;
       };
-
 `;
 
 export const Button = styled.button`
@@ -80,11 +84,14 @@ export const Button = styled.button`
 	font-family: 'Rye', cursive;
     font-size: 14px;
     font-weight: 500;
+    text-decoration: none;
 	background-color: ${red};
     box-shadow: 3px 5px ${black};
     &:hover {
         background: ${redish};
         cursor: pointer;
+        color:black;
+        text-decoration: none;
     }
     @media (max-width: 668px) {
         width: 220px;
@@ -111,7 +118,7 @@ export const GameOptionContainer = styled(Container)`
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
-
+    color:black;
 `;
 
 export const LandingContainer = styled(Container)`
@@ -119,14 +126,13 @@ export const LandingContainer = styled(Container)`
     margin-bottom: 20px;
     justify-content: space-around;
     align-items:stretch;
-
 `;
 
 export const BookContainer = styled(Container)`
     padding: 35px;
     flex-direction:row; 
     width: 800px;
-    height: 130px; 
+    height: 200px; 
     margin-bottom: 15px;
     background-color: ${white};
     @media (max-width: 668px) {
@@ -163,7 +169,6 @@ export const Wrapper = styled.div`
        
         flex-direction:column;
       };
-
 `;
 
 export const Image = styled.img`
@@ -195,7 +200,6 @@ export const BookImage = styled(Image)`
         100% { transform: translate(1px, -2px) rotate(-1deg); }
       }
     
-
 `;
 
 export const SectionContainer = styled.div`
@@ -328,7 +332,6 @@ export const GameImage = styled(Image)`
     opacity: 1
     transition: 0.3s;
     
-
 `;
 
 /* Styling for NewGame */
@@ -344,7 +347,9 @@ export const CardsContainer = styled.div`
 `;
 
 export const RestartWrapper = styled.div`
-flex-direction:row;
+    flex-direction:row;
+    color:black;
+    text-decoration: none;
 `;
 
 /* Styling for Highscore page */

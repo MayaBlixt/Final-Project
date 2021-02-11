@@ -6,7 +6,7 @@ import { GameOption } from '../components/GameOption'
 import { NewGame } from '../components/NewGame'
 import { GameDetails } from '../components/GameDetails'
 import {
-    H1Title,
+    Title,
     GameOptionContainer,
     MemoryContainer
 } from '../components/StyledComponents';
@@ -24,7 +24,7 @@ export const MemoryPage = () => {
 
     return (
         <MemoryContainer>
-            <H1Title> Memory Game</H1Title>
+            <Title> Memory Game</Title>
             <GameDetails/>  
             <NewGame/>
             <Restart/> 

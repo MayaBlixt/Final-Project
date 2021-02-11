@@ -37,7 +37,7 @@ export const LandingPage = () => {
                <SectionWrapper>
                     <H2Title>New book release</H2Title>
                     <Text>This spring the fifth August and Clownen book will be release.</Text>
-                    <StyledLink to="/book"> 
+                    <StyledLink to="/books"> 
                         <Button>Check out books</Button>
                     </StyledLink>
                 </SectionWrapper>
