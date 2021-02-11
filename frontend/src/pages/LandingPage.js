@@ -22,7 +22,8 @@ import {
     Button,
     SectionWrapper,
     BookImage,
-    H2Title
+    H2Title,
+    EndContainer
 } from '../components/StyledComponents';
 
 export const LandingPage = () => {
@@ -32,12 +33,7 @@ export const LandingPage = () => {
         <LandingContainer>
             <H1Title> August & Clownen fan page </H1Title> 
             <BookContainer>
-            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_jR229r.json"  
-                            background="transparent"  
-                            speed="1"  
-                            style={{width: 250 }}  
-                            loop  
-                            autoplay/> 
+            <BookImage src={book} alt="Bok image"/>
                <SectionWrapper>
                     <H2Title>New book release</H2Title>
                     <Text>This spring the fifth August and Clownen book will be release.</Text>
@@ -45,7 +41,7 @@ export const LandingPage = () => {
                         <Button>Check out books</Button>
                     </StyledLink>
                 </SectionWrapper>
-               <BookImage src={book}/>
+               <BookImage src={book} alt="Bok image"/>
             </BookContainer> 
             <Wrapper>
                 <SectionContainer>
@@ -56,7 +52,7 @@ export const LandingPage = () => {
                             <Button>Play memory</Button>
                         </StyledLink>
                     </SectionWrapper>
-                    <Image src={memory}/>
+                    <Image src={memory} alt="August & Clownen"/>
                 </SectionContainer>
                 <SectionContainer>
                     <SectionWrapper>
@@ -66,21 +62,23 @@ export const LandingPage = () => {
                             <Button>Go to highscore </Button>
                         </StyledLink>
                     </SectionWrapper>
-                    <Image src={drawing}/>
+                    <Image src={drawing} alt="Clown"/>
                 </SectionContainer>
             </Wrapper>
             <BookContainer>
             <BookImage src={highscore}/>
                <SectionWrapper>
-               <    H2Title>Share your drawings</H2Title>
+                 <H2Title>Share your drawings</H2Title>
                     <Text> Show the whole world your best August & Clownen drawings. Go to the upload drawings page to make it happend </Text>
                     <StyledLink to="/drawings"> 
                         <Button>Upload drawing</Button>
                     </StyledLink>
                 </SectionWrapper>
-               <Image src={trapets}/>
-            <Footer/>
+               <Image src={trapets} alt="Girl"/>
             </BookContainer> 
+        <EndContainer></EndContainer>
+            <Footer/>
+
         </LandingContainer>
         
     );

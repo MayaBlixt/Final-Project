@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
   text-align: center;
   background-image: url("./assets/Background.jpeg");
   background-color: #F8D07B;
@@ -17,21 +19,20 @@ code {
     monospace;
 }
 
-.card {
-  width: 160px;
-  height: 240px;
-  margin-bottom: 20px;
 
+.card {
+  width: 140px;
+  height: 220px;
 
 }
 .card:not(:nth-child(6n)) {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .c {
   position: absolute;
-  max-width: 160px;
-  max-height: 240px;
+  max-width: 120px;
+  max-height: 160px;
   width: 50ch;
   height: 50ch;
   cursor: pointer;
@@ -65,3 +66,141 @@ code {
   }
 
 
+  * {
+    margin: 10;
+    padding: 10;
+  }
+  
+  
+  
+  /* Let's style the wrapper in such away that, 
+  it should always be at the center of the browser */
+  .wrapper {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+  
+  /* Style the Un-order list by setting its list-style to none */
+  .wrapper ul {
+    list-style: none;
+    margin:0;
+  }
+  
+  /* Style the list items inside the UL list, by setting its width, height and line-height 
+    and float them to left and set its border and border-radius.
+   */
+  .wrapper ul li {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid white;
+    float: left;
+    transition: all 0.5s ease;
+  }
+  
+  /* Style the icons by setting its color and margin-top value to 20px 
+  to align it properly */
+  .wrapper ul li .fa {
+    color: white;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+  }
+  
+  /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+    to icons for glowing effect and use transition property for smooth transition effect. */
+  /*facebook*/
+  .wrapper ul li:hover.facebook {
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+  }
+  
+  /*twitter*/
+  .wrapper ul li:hover.twitter {
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+  }
+  
+  /* instagram */
+  .wrapper ul li:hover.instagram {
+    border: 5px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+  }
+    
+  
+  /* media queries */
+  
+  @media screen and (max-width: 640px){
+    .wrapper {
+        width: 350px;
+    }
+    .wrapper ul li{
+        margin-top: 10px;
+    }
+    .wrapper ul li.google{
+        margin-left: 60px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 340px){
+    .wrapper {
+        width: 150px;
+    }
+    .wrapper ul li{
+        margin:15px;
+    }
+    .wrapper ul li.google{
+        margin-left: 15px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -17,23 +17,32 @@ export const Container = styled.section`
 `;
 
 export const H1Title = styled.h1`
-    margin-top: 140px;
-    font-size: 60px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    font-size: 35px;
     font-weight: 600;
     text-align: center;
     color:${black};
     font-family: 'Rye', cursive;
 `;
 export const H2Title = styled.h2`
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
     color: ${black};
     font-family: 'Rye', cursive;
     margin-bottom:0;
 `;
+export const H3Title = styled.h3`
+    font-size: 20px;
+    text-align: center;
+    color: ${black};
+    font-family: 'Rye', cursive;
+    margin-bottom:0;
+    font-weight:500;
+`;
 
 export const Text = styled.p`
-    font-size: 20px;
+    font-size: 14px;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
     font-weight:500;
@@ -42,13 +51,13 @@ export const Text = styled.p`
 `;
 
 export const Button = styled.button`
-	width: 250px;
-	height: 55px;
+	width: 180px;
+	height: 40px;
 	border-radius: 30px;
 	margin: 10px;
 	border: 0;
 	font-family: 'Rye', cursive;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
 	background-color: ${red};
     box-shadow: 3px 5px ${black};
@@ -87,19 +96,28 @@ export const LandingContainer = styled(Container)`
 export const BookContainer = styled(Container)`
     padding: 35px;
     flex-direction:row; 
-    width: 950px;
-    height: 250px; 
-    margin-bottom: 30px;
+    width: 800px;
+    height: 130px; 
+    margin-bottom: 15px;
     background-color: ${white};
+    
+`;
+export const EndContainer = styled(Container)`
+    padding: 35px;
+    flex-direction:row; 
+    width: 800px;
+    height: 100px; 
+    margin-bottom: 15px;
     
 `;
 
 export const Wrapper = styled.div`
+    width: 1060px;
     display: flex;
     flex-direction:row;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 
 `;
 
@@ -110,23 +128,39 @@ export const Image = styled.img`
 `;
 
 export const BookImage = styled(Image)`
-    width: 180px;
+    width: 120px;
     opacity: 1
     transition: 0.3s;
-    &:hover {
-        opacity: 0.6;
-    } 
+    :hover {
+        animation: shake 1s;
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+      }
+    
 
 `;
 
 export const SectionContainer = styled.div`
-    margin: 0 auto;
-    padding: 30px;
+    margin: 10px;
+    padding: 15px;
     display: flex;
-    width: 420px;
-    height: 250px;
+    width: 392px;
+    height: 200px;
     flex-direction:row;
-  
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
     background-color:${white};
@@ -150,21 +184,22 @@ export const FooterContainer = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: ${redish};
+    background-color: #c60303;
     color: white;
     text-align: center;
+    height: 60px;
 `;
 
 /* Styling for Drawing Page */
 
 export const WIPText = styled(Text)`
     font-family: 'Rye', cursive;
-    font-size: 24px;
+    font-size: 18px;
 `;
 
 export const WIPContainer = styled(BookContainer)`
     flex-direction:column; 
-    width: 600px;
+    width: 400px;
     height:auto;
     margin-bottom: 0;
     margin-top: 120px;
@@ -176,6 +211,8 @@ export const DetailsContainer = styled(Container)`
     padding: 20px;
     flex-direction:row;  
     margin-bottom: 20px;
+    width:920px;
+    height:25px;
     background-color:${white};
     justify-content: space-evenly;
     
@@ -202,11 +239,11 @@ export const Form = styled.form`
 `;
 
 export const UserInput = styled.input`
-    width: 250px;
-    height: 55px;
+    width: 180px;
+    height: 40px;
     border-radius: 30px;
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Rye', cursive;
     text-align: center;
     border: none;
@@ -219,7 +256,7 @@ export const InputLabel = styled.label`
     flex-direction: column;
     box-sizing: border-box;
     font-family: 'Rye', cursive;
-    font-size: 22px;
+    font-size: 16px;
     color:${black};
     font-weight: 500;
     border-radius: 20px;
@@ -232,19 +269,17 @@ export const Label = styled.label`
 `;
 
 export const GameImage = styled(Image)`
-    width: 300px;
+    width: 250px;
     opacity: 1
     transition: 0.3s;
-    &:hover {
-        opacity: 0.6;
-    } 
+    
 
 `;
 
 /* Styling for NewGame */
 
 export const CardsContainer = styled.div`
-    width: 1060px;
+    width: 960px;
     height: auto;
     margin: 30px;
     display: flex;

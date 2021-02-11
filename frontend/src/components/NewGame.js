@@ -35,7 +35,7 @@ export const NewGame = () => {
         memory11,
         memory12,
       ];
-    const level = useSelector((store) => store.game.gameoption.level);
+      const level = useSelector((store) => store.game.gameoption.level);
     const [board, setBoard] = useState([])
     const [flippedCount, setFlippedCount] = useState(0)
     const [flippedIndexes, setFlippedIndexes] = useState([])
@@ -158,5 +158,4 @@ export const NewGame = () => {
         )
       }
     };
-
    

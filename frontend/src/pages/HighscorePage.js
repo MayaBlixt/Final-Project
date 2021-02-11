@@ -6,13 +6,13 @@ import {
    WIPContainer,
    Button,
    FirstPlaceContainer,
-   FirstPlaceCirkel,
    HeaderScore,
    Header,
    FirstPlaceScore,
    OrderedList,
    List,
-   TotalScore
+   TotalScore,
+   H1Title
 } from '../components/StyledComponents';
 import { fetchHighscore } from 'reducers/game';
 
@@ -29,11 +29,13 @@ export const HighscorePage = () => {
 
 
     return (
+		<>
+		<H1Title> Highscore  </H1Title> 
         <WIPContainer>
 			<FirstPlaceContainer>
-            <FirstPlaceCirkel>
+          
 					<HeaderScore style={{ fontSize: 48 }}>1</HeaderScore>
-                    </FirstPlaceCirkel>
+
 				{firstPlace && (
 					<>
 						<Header style={{ margin: 5 }}>{firstPlace.name}</Header>
@@ -53,5 +55,6 @@ export const HighscorePage = () => {
 			</OrderedList>
             <Link to="/"> <Button> Back to main page </Button> </Link>
         </WIPContainer>
+		</>
     )
 }

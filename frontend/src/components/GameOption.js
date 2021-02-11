@@ -13,7 +13,7 @@ import {
     InputLabel,
     UserInput,
     WIPContainer,
-    H2Title
+    H3Title
 } from '../components/StyledComponents';
 
 export const GameOption = () => {
@@ -45,8 +45,8 @@ export const GameOption = () => {
         {!chooseLevel && 
                 <WIPContainer>
                 <Form onSubmit = {setUser}>
-                    <H2Title> Pick a username to start playing ... </H2Title>
-                    <GameImage src={cannon}/>
+                    <H3Title> Pick a username to start playing ... </H3Title>
+                    <GameImage src={tent} alt="Cannon"/>
 				    <InputLabel> Username:</InputLabel>
 				    <UserInput
 						required
@@ -67,8 +67,8 @@ export const GameOption = () => {
         }
         {chooseLevel && 
                 <WIPContainer>
-                    <H2Title>... and pick a difficulty level </H2Title>
-                    <GameImage src={tent}/>
+                    <H3Title>... and pick a difficulty level </H3Title>
+                    <GameImage src={cannon} alt="Tent"/>
                     <Button onClick={() => updateGameLevel(12)}>Easy </Button>
                     <Button onClick={() => updateGameLevel(18)}>Medium</Button>
                     <Button onClick={() => updateGameLevel(24)}>Hard</Button>
