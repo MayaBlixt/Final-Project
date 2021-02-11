@@ -12,8 +12,15 @@ body {
   background-color: #F8D07B;
   background-repeat: no-repeat; 
   background-size: cover;
+  
 
 }
+@media only screen and (max-width: 668px) {
+ body {
+   background-image: none;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

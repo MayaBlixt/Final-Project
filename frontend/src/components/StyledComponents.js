@@ -24,6 +24,13 @@ export const H1Title = styled.h1`
     text-align: center;
     color:${black};
     font-family: 'Rye', cursive;
+    @media (max-width: 668px) {
+        font-size: 50px;
+        
+      };
+      @media (min-width: 669px) and (max-width: 1023px) {
+        margin-bottom: 45px;
+      };
 `;
 export const H2Title = styled.h2`
     font-size: 24px;
@@ -39,6 +46,13 @@ export const H3Title = styled.h3`
     font-family: 'Rye', cursive;
     margin-bottom:0;
     font-weight:500;
+    @media (max-width: 668px) {
+        font-size: 30px;
+        
+      };
+      @media (min-width: 669px) and (max-width: 1023px) {
+        margin-bottom: 25px;
+      };
 `;
 
 export const Text = styled.p`
@@ -47,6 +61,13 @@ export const Text = styled.p`
     font-family: 'Roboto', sans-serif;
     font-weight:500;
     margin-top:1;
+    @media (max-width: 668px) {
+        font-size: 22px;
+        
+      };
+      @media (min-width: 669px) and (max-width: 1023px) {
+        margin-bottom: 18px;
+      };
 
 `;
 
@@ -65,6 +86,14 @@ export const Button = styled.button`
         background: ${redish};
         cursor: pointer;
     }
+    @media (max-width: 668px) {
+        width: 220px;
+        height: 60px
+      };
+      @media (min-width: 669px) and (max-width: 1023px) {
+        width: 220px;
+        height: 60px
+      };
 `;
 /* Styling for Memory Page */
 
@@ -100,6 +129,14 @@ export const BookContainer = styled(Container)`
     height: 130px; 
     margin-bottom: 15px;
     background-color: ${white};
+    @media (max-width: 668px) {
+        width: 80%;
+        height: 70%;
+      };
+      @media (min-width: 669px) and (max-width: 1023px) {
+        width: 650px;
+        height: 45%;
+      };
     
 `;
 export const EndContainer = styled(Container)`
@@ -118,6 +155,14 @@ export const Wrapper = styled.div`
     justify-content:center;
     align-items: center;
     margin-bottom: 5px;
+    @media (max-width: 668px) {
+    
+        flex-direction:column;
+      };
+      @media (min-width: 669px) and (max-width: 1023px) {
+       
+        flex-direction:column;
+      };
 
 `;
 
@@ -167,6 +212,16 @@ export const SectionContainer = styled.div`
     border-radius: 30px;
     text-decoration: none;
     cursor: pointer;
+    @media (max-width: 668px) {
+        width: 100%
+        height: 50%;
+      
+      };
+      @media (min-width: 669px) and (max-width: 1023px) {
+        width: 680px;
+        height: 45%;
+       
+      };
 `;
 
 export const SectionWrapper = styled.div`
