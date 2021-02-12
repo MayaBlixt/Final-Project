@@ -8,8 +8,11 @@ import { GameDetails } from '../components/GameDetails'
 import {
     Title,
     GameOptionContainer,
-    MemoryContainer
+    MemoryContainer,
+    RestartWrapper,
 } from '../components/StyledComponents';
+import { BackButton } from 'components/BackButton';
+import { Highscorebutton } from 'components/Highscorebutton';
 
 export const MemoryPage = () => {
 
@@ -27,7 +30,10 @@ export const MemoryPage = () => {
             <Title> Memory Game</Title>
             <GameDetails/>  
             <NewGame/>
-            <Restart/> 
+            <RestartWrapper>
+                <BackButton/> 
+                <Highscorebutton/>
+            </RestartWrapper>
         </MemoryContainer>
     );
 };

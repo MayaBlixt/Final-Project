@@ -34,9 +34,9 @@ export const game = createSlice ({
             store.guestScore= score;
         },
         setHighscore: (store,action) => {
-            const { newScore } = action.payload;
-            console.log(`Highscore in store:${newScore}`);
-            store.highscore= newScore;
+           store.highscore = action.payload;
+           console.log("Highscore");
+            
         },
         setScore: (store, action) => {
             const { score } = action.payload;
@@ -48,7 +48,7 @@ export const game = createSlice ({
 
 export const fetchHighscore = () => {
     return (dispatch) => {
-      fetch("")
+      fetch('https://august-clowen-fanpage.herokuapp.com/highscore')
         .then((res) => res.json())
         .then((highscore) => {
           dispatch(game.actions.setHighscore(highscore));
@@ -57,7 +57,7 @@ export const fetchHighscore = () => {
   };
   
   export const postHighscore = (name, score) => {
-    fetch("", {
+    fetch('https://august-clowen-fanpage.herokuapp.com/highscore', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username: name, score: score }),

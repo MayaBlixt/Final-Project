@@ -36,7 +36,7 @@ export const LandingPage = () => {
             <BookImage src={book} alt="Bok image"/>
                <SectionWrapper>
                     <H2Title>New book release</H2Title>
-                    <Text>This spring the fifth August and Clownen book will be release.</Text>
+                    <Text>This spring the fifth August and Clownen book will be release. <br></br>Until then check out the earlier books August & Clowen books </Text>
                     <StyledLink to="/books"> 
                         <Button>Check out books</Button>
                     </StyledLink>

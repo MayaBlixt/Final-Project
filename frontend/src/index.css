@@ -82,7 +82,7 @@ code {
   .wrapper {
     position: relative;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-30%, -50%);
     width: 300px;
   }
   
@@ -204,7 +204,6 @@ code {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color:#fff;
     border-radius: 30px;
     margin:20px;
     padding-top: 45px;

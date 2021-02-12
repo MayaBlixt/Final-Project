@@ -43,10 +43,13 @@ export const GameOption = () => {
     return (
          <>
         {!chooseLevel && 
+
+                <>
+               
                 <WIPContainer>
                 <Form onSubmit = {setUser}>
-                    <H3Title> Pick a username to start playing ... </H3Title>
-                    <GameImage src={tent} alt="Cannon"/>
+                <H3Title> Pick a username to start playing ... </H3Title>
+                <GameImage src={tent} alt="Cannon"/>
 				    <InputLabel> Username:</InputLabel>
 				    <UserInput
 						required
@@ -61,7 +64,9 @@ export const GameOption = () => {
 				
                 <Button type="submit"> Start playing</Button>
                 </Form>
+                
                 </WIPContainer>
+                </>
             
              
         }

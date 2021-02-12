@@ -18,7 +18,7 @@ export const Container = styled.section`
 
 
 export const H1Title = styled.h1`
-    margin-top: 90px;
+    margin-top: 120px;
     margin-bottom: 40px;
     font-size: 35px;
     font-weight: 600;
@@ -42,7 +42,7 @@ export const H2Title = styled.h2`
     text-align: center;
     color: ${black};
     font-family: 'Rye', cursive;
-    margin-bottom:0;
+    margin:10px;
 `;
 export const H3Title = styled.h3`
     font-size: 20px;
@@ -132,7 +132,7 @@ export const BookContainer = styled(Container)`
     padding: 35px;
     flex-direction:row; 
     width: 800px;
-    height: 200px; 
+    height: 220px; 
     margin-bottom: 15px;
     background-color: ${white};
     @media (max-width: 668px) {
@@ -178,7 +178,7 @@ export const Image = styled.img`
 `;
 
 export const BookImage = styled(Image)`
-    width: 120px;
+    width: 140px;
     opacity: 1
     transition: 0.3s;
     :hover {
@@ -230,7 +230,7 @@ export const SectionContainer = styled.div`
 
 export const SectionWrapper = styled.div`
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction:column;
     justify-content: space-around;
@@ -261,7 +261,7 @@ export const WIPContainer = styled(BookContainer)`
     width: 400px;
     height:auto;
     margin-bottom: 0;
-    margin-top: 120px;
+    margin-top: 30px;
 `;
 
 /* Styling for GameDetails */
@@ -330,6 +330,7 @@ export const Label = styled.label`
 export const GameImage = styled(Image)`
     width: 250px;
     opacity: 1
+    margin:20px;
     transition: 0.3s;
     
 `;
@@ -355,70 +356,23 @@ export const RestartWrapper = styled.div`
 /* Styling for Highscore page */
 
 export const TotalScore = styled.span`
-	color: ${red};
+	color: ${black};
 	float: right;
 	margin-left: 10px;
 	font-size: 20px;
-	font-weight: bold;
-`;
-export const FirstPlaceCirkel = styled.div`
-	width: 110px;
-	height: 110px;
-	border-radius: 50%;
-	background-color: ${red};
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 10px;
-`;
-
-
-export const FirstPlaceScore = styled(TotalScore)`
-	font-size: 24px;
-`;
-export const FirstPlace = styled.div`
-	width: 110px;
-	height: 110px;
-	border-radius: 50%;
-	background-color: ${red};
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 10px;
-`;
-
-export const FirstPlaceContainer = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-`;
-export const HeaderScore = styled.h1`
-	font-size: 100px;
-	margin: 0;
-	padding: 0;
-	color: ${red};
-	font-weight: 900;
-	line-height: 90px;
-`;
-export const Header = styled.h1`
-	color: ${red};
-	text-align: center;
-	font-size: 30px;
+	
 `;
 export const OrderedList = styled.ol`
 	width: 90%;
 	box-sizing: border-box;
-	font-weight: bold;
 	margin: 30px;
 `;
 export const List = styled.li`
-	color: ${red};
-	border-bottom: 0.2px solid #0b1d34;
+	color: ${black};
+	border-bottom: 0.5px dotted black;
 	padding: 15px;
-	font-size: 24px;
-	::marker {
-		color: ${red};
-		font-size: 18px;
-	}
+	font-size: 18px;
+  font-family: 'Rye', cursive;
+
 `;
+

@@ -48,7 +48,7 @@ app.listen(port, () => {
 app.get("/highscore", async (req, res) => {
   try {
     const highscore = await Highscore.find()
-      //.sort({ score: "desc" })
+      .sort({ score: "desc" })
       .limit(10)
       .exec();
     res.json(highscore);

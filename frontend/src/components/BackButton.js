@@ -19,9 +19,9 @@ export const BackButton = () =>{
 	};
 
     return (
-        <RestartWrapper>
+        <>
             <Link to="/"> <Button onClick={() => updateGameLevel(null)}> Back to main page </Button> </Link>
-        </RestartWrapper>
+        </>
 
     )
 };
