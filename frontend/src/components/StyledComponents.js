@@ -75,6 +75,10 @@ export const Text = styled.p`
       };
 `;
 
+export const BookText = styled(Text)`
+font-size: 18px;
+`;
+
 export const Button = styled.button`
 	width: 180px;
 	height: 40px;

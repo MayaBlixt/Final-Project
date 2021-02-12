@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 
@@ -9,7 +9,6 @@ import {
    OrderedList,
    List,
    TotalScore,
-   Title,
    H2Title,
    BookImage
 } from '../components/StyledComponents';
@@ -26,7 +25,7 @@ export const HighscorePage = () => {
 
 	const highscore = useSelector((store) => store.game.highscore);
 	const slicedHighscore = highscore.slice(0, 6);
-	const firstPlace = highscore[0];
+
 
 
 	return (
@@ -38,7 +37,7 @@ export const HighscorePage = () => {
 				{slicedHighscore.map((score, index) => {
 					return (
 						<List key={index}>
-							{score.name} <TotalScore>{score.score} moves</TotalScore>
+							{score.name} <TotalScore>{score.score} clicks</TotalScore>
 						</List>
 					);
 				})}

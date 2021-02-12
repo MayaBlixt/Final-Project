@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 import {
     Button,
-    RestartWrapper
 } from '../components/StyledComponents';
 
 export const BackButton = () =>{

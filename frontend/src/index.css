@@ -231,7 +231,7 @@ code {
 
   .container .box:hover  .imgBx {
   
-    transform: translate(-45px, -45px);
+    transform: translate(-20px, -45px);
   }
 
   .container .box  .imgBx img {
@@ -262,7 +262,7 @@ code {
 
   .container .box:hover  .content {
   
-    transform: translate(45px, 45px);
+    transform: translate(20px, 45px);
   }
 
   .container .box  .content h2{
