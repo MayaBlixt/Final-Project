@@ -12,7 +12,7 @@ We have also developed the Backend for this application which consists of a REST
 
 You can find the backend here: https://august-clowen-fanpage.herokuapp.com/
 
-## Future features 🎪
+## Future features 🎪 :)
 Each August and Clownen book has a couple of pages that are not colored yet. A nice feature would be to allow the users to upload images of their drawing so that they can be viewed by others. A link has been created from the main landing page to a drawingspage but it has not yet been developed. 
 
 ## View it Live! 🎪
