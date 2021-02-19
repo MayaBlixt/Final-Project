@@ -1,5 +1,4 @@
 import React from 'react'
-import "@lottiefiles/lottie-player";
 
 import book from "../assets/Book_img.png";
 import memory from "../assets/Memory_img.png";
@@ -7,12 +6,10 @@ import drawing from "../assets/Memory1.png";
 import highscore from "../assets/Memory2.png";
 import trapets from "../assets/Trapets.png";
 
-
 import { Footer } from '../components/Footer'
 
 import {
     StyledLink,
-    H1Title,
     LandingContainer,
     BookContainer,
     Wrapper,
@@ -23,7 +20,8 @@ import {
     SectionWrapper,
     BookImage,
     H2Title,
-    EndContainer
+    EndContainer,
+    LandingTitle
 } from '../components/StyledComponents';
 
 export const LandingPage = () => {
@@ -31,12 +29,12 @@ export const LandingPage = () => {
     return (
     
         <LandingContainer>
-            <H1Title> August & Clownen fan page </H1Title> 
+            <LandingTitle> August & Clownen fanpage </LandingTitle> 
             <BookContainer>
             <BookImage src={book} alt="Bok image"/>
                <SectionWrapper>
-                    <H2Title>New book release</H2Title>
-                    <Text>This spring the fifth August and Clownen book will be release. <br></br>Until then check out the earlier books August & Clowen books </Text>
+                    <H2Title>New book release </H2Title>
+                    <Text>This spring the 6th August and Clownen book will be release :) <br></br>Until then check out the earlier books August & Clowen books </Text>
                     <StyledLink to="/books"> 
                         <Button>Check out books</Button>
                     </StyledLink>
@@ -78,7 +76,6 @@ export const LandingPage = () => {
             </BookContainer> 
         <EndContainer></EndContainer>
             <Footer/>
-
         </LandingContainer>
         
     );

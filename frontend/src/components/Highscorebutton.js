@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import {
     Button,
-    RestartWrapper
 } from './StyledComponents';
 
 export const Highscorebutton = () =>{

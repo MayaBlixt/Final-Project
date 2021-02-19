@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { Restart} from '../components/Restart'
 import { GameOption } from '../components/GameOption'
 import { NewGame } from '../components/NewGame'
 import { GameDetails } from '../components/GameDetails'

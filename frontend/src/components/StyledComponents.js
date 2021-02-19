@@ -37,6 +37,19 @@ export const Title = styled(H1Title)`
     margin-top: 70px;
 
 `;
+
+export const LandingTitle = styled(H1Title)`
+  @media (max-width: 668px) {
+  font-size: 50px;
+  
+  };
+  @media (min-width: 669px) and (max-width: 1023px) {
+    margin-top: 70px;
+    margin-bottom: 45px;
+    border-box: none;
+};
+
+`;
 export const H2Title = styled.h2`
     font-size: 24px;
     text-align: center;
