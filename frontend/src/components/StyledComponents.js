@@ -8,55 +8,53 @@ const white = '#ffffff';
 
 /* Common component styling */
 export const Container = styled.section`
-    width: 1060px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border-radius: 30px;
 `;
 
-
 export const H1Title = styled.h1`
     margin-top: 120px;
     margin-bottom: 40px;
-    font-size: 35px;
+    font-size: 50px;
     font-weight: 600;
     text-align: center;
     color:${black};
     font-family: 'Rye', cursive;
+
     @media (max-width: 668px) {
-        font-size: 50px;
-        
-      };
-      @media (min-width: 669px) and (max-width: 1023px) {
-        margin-bottom: 45px;
-      };
+        font-size: 30px;
+        margin-top: 60px;
+    };
+    @media (min-width: 669px) and (max-width: 1023px) {
+        font-size: 40px;
+    };
 `;
+
 export const Title = styled(H1Title)`
     margin-top: 70px;
 
 `;
 
-export const LandingTitle = styled(H1Title)`
-  @media (max-width: 668px) {
-  font-size: 50px;
-  
-  };
-  @media (min-width: 669px) and (max-width: 1023px) {
-    margin-top: 70px;
-    margin-bottom: 45px;
-    border-box: none;
-};
-
-`;
 export const H2Title = styled.h2`
     font-size: 24px;
     text-align: center;
     color: ${black};
     font-family: 'Rye', cursive;
     margin:10px;
+
+    @media (max-width: 668px) {
+      font-size: 18px;
+      
+    };
+    @media (min-width: 669px) and (max-width: 1023px) {
+      font-size: 20px;
+    };
 `;
+
 export const H3Title = styled.h3`
     font-size: 20px;
     text-align: center;
@@ -64,46 +62,49 @@ export const H3Title = styled.h3`
     font-family: 'Rye', cursive;
     margin-bottom:0;
     font-weight:500;
+
     @media (max-width: 668px) {
         font-size: 30px;
         
-      };
-      @media (min-width: 669px) and (max-width: 1023px) {
+    };
+    @media (min-width: 669px) and (max-width: 1023px) {
         margin-bottom: 25px;
-      };
+    };
 `;
 
 export const Text = styled.p`
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight:600;
     margin-top:1;
+
     @media (max-width: 668px) {
-        font-size: 22px;
+        font-size: 14px;
         
-      };
-      @media (min-width: 669px) and (max-width: 1023px) {
-        margin-bottom: 18px;
-      };
+    };
+    @media (min-width: 669px) and (max-width: 1023px) {
+        margin-bottom: 14px;
+    };
 `;
 
 export const BookText = styled(Text)`
-font-size: 18px;
+    font-size: 18px;
 `;
 
 export const Button = styled.button`
-	width: 180px;
-	height: 40px;
-	border-radius: 30px;
-	margin: 10px;
-	border: 0;
-	font-family: 'Rye', cursive;
+    width: 180px;
+    height: 40px;
+    border-radius: 30px;
+    margin: 10px;
+    border: 0;
+    font-family: 'Rye', cursive;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-	background-color: ${red};
+    background-color: ${red};
     box-shadow: 3px 5px ${black};
+    
     &:hover {
         background: ${redish};
         cursor: pointer;
@@ -111,14 +112,18 @@ export const Button = styled.button`
         text-decoration: none;
     }
     @media (max-width: 668px) {
-        width: 220px;
-        height: 60px
-      };
-      @media (min-width: 669px) and (max-width: 1023px) {
-        width: 220px;
-        height: 60px
-      };
+        width: 160px;
+      
+    };
+    @media (min-width: 669px) and (max-width: 1023px) {
+        width: 200px;
+    };
 `;
+
+export const Header = styled(Container)`
+
+`;
+ 
 /* Styling for Memory Page */
 
 export const MemoryContainer = styled(Container)`
@@ -129,7 +134,6 @@ export const MemoryContainer = styled(Container)`
 export const GameOptionContainer = styled(Container)`
      margin-bottom: 10px;
 `;
-
 
 /* Styling for Landing Page */
 
@@ -142,25 +146,17 @@ export const LandingContainer = styled(Container)`
     flex-direction:column;
     margin-bottom: 20px;
     justify-content: space-around;
-    align-items:stretch;
+    align-items:center;
 `;
 
 export const BookContainer = styled(Container)`
     padding: 35px;
     flex-direction:row; 
-    width: 800px;
-    height: 220px; 
-    margin-bottom: 15px;
+    margin: 15px;
+    min-width: 200px; 
+    max-width: 900px;
     background-color: ${white};
-    @media (max-width: 668px) {
-        width: 80%;
-        height: 70%;
-      };
-      @media (min-width: 669px) and (max-width: 1023px) {
-        width: 650px;
-        height: 45%;
-      };
-    
+  
 `;
 export const EndContainer = styled(Container)`
     padding: 35px;
@@ -171,29 +167,39 @@ export const EndContainer = styled(Container)`
     
 `;
 
-export const Wrapper = styled.div`
-    width: 1060px;
+export const Wrapper = styled(Container)`
     display: flex;
     flex-direction:row;
     justify-content:center;
-    align-items: center;
+    align-items: space-around;
     margin-bottom: 5px;
-    @media (max-width: 668px) {
     
+    @media (max-width: 668px) {
         flex-direction:column;
-      };
-      @media (min-width: 669px) and (max-width: 1023px) {
-       
+        align-items: center;
+    };
+    @media (min-width: 669px) and (max-width: 1023px) {
         flex-direction:column;
-      };
+        align-items: center;
+    };
 `;
 
 export const Image = styled.img`
     width: 140px;
     text-decoration: none;
     padding-right: 10px;
+
+    @media (max-width: 668px) {
+      
+      width: 80px;
+    };
 `;
 
+export const UploadImage = styled(Image)`
+    @media (max-width: 668px) {   
+        display:none;
+    };
+`;
 export const BookImage = styled(Image)`
     width: 140px;
     opacity: 1
@@ -203,7 +209,7 @@ export const BookImage = styled(Image)`
         animation-iteration-count: infinite;
       }
       
-      @keyframes shake {
+    @keyframes shake {
         0% { transform: translate(1px, 1px) rotate(0deg); }
         10% { transform: translate(-1px, -2px) rotate(-1deg); }
         20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -215,15 +221,17 @@ export const BookImage = styled(Image)`
         80% { transform: translate(-1px, -1px) rotate(1deg); }
         90% { transform: translate(1px, 2px) rotate(0deg); }
         100% { transform: translate(1px, -2px) rotate(-1deg); }
-      }
-    
+    }
+    @media (max-width: 668px) {
+        display:none;
+    };
 `;
 
-export const SectionContainer = styled.div`
+export const SectionContainer = styled(Container)`
     margin: 10px;
     padding: 15px;
     display: flex;
-    width: 392px;
+    width: 400px;
     height: 200px;
     flex-direction:row;
     justify-content: space-around;
@@ -233,16 +241,19 @@ export const SectionContainer = styled.div`
     border-radius: 30px;
     text-decoration: none;
     cursor: pointer;
+
     @media (max-width: 668px) {
-        width: 100%
-        height: 50%;
-      
-      };
-      @media (min-width: 669px) and (max-width: 1023px) {
-        width: 680px;
-        height: 45%;
-       
-      };
+      padding: 35px;
+      flex-direction:row; 
+      margin: 15px;
+      width:90%;
+    };
+    @media (min-width: 669px) and (max-width: 1023px) {
+      padding: 35px;
+      flex-direction:row; 
+      margin: 15px;
+      width:90%;
+    };
 `;
 
 export const SectionWrapper = styled.div`
@@ -255,7 +266,14 @@ export const SectionWrapper = styled.div`
     border-radius: 30px;
 `;
 
-export const FooterContainer = styled.div`
+export const UploadContainer =styled(BookContainer)`
+
+    margin-bottom: 80px;
+
+`;
+
+
+export const FooterContainer = styled.section`
     position: fixed;
     left: 0;
     bottom: 0;
@@ -291,7 +309,6 @@ export const DetailsContainer = styled(Container)`
     height:25px;
     background-color:${white};
     justify-content: space-evenly;
-    
 `;
 
 /* Styling for GameOption */
@@ -349,7 +366,6 @@ export const GameImage = styled(Image)`
     opacity: 1
     margin:20px;
     transition: 0.3s;
-    
 `;
 
 /* Styling for NewGame */
@@ -379,11 +395,13 @@ export const TotalScore = styled.span`
 	font-size: 20px;
 	
 `;
+
 export const OrderedList = styled.ol`
 	width: 90%;
 	box-sizing: border-box;
 	margin: 30px;
 `;
+
 export const List = styled.li`
 	color: ${black};
 	border-bottom: 0.5px dotted black;
@@ -393,3 +411,8 @@ export const List = styled.li`
 
 `;
 
+/* Styling for NewGame */
+export const BooksPageContainer =styled(LandingContainer)`
+
+`;
+ 

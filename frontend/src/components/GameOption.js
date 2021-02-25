@@ -1,7 +1,6 @@
 import React, { useState} from 'react'
 import { game } from '../reducers/game';
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
 import "@lottiefiles/lottie-player";
 
 import cannon from "../assets/Cannon.png";

@@ -19,9 +19,12 @@ import {
     Button,
     SectionWrapper,
     BookImage,
+    UploadImage,
     H2Title,
     EndContainer,
-    LandingTitle
+    H1Title,
+    Header,
+    UploadContainer
 } from '../components/StyledComponents';
 
 export const LandingPage = () => {
@@ -29,9 +32,11 @@ export const LandingPage = () => {
     return (
     
         <LandingContainer>
-            <LandingTitle> August & Clownen fanpage </LandingTitle> 
+            <Header> 
+                <H1Title> August & Clownen fanpage </H1Title> 
+            </Header>
             <BookContainer>
-            <BookImage src={book} alt="Bok image"/>
+            <BookImage src={book} alt="August clownen book"/>
                <SectionWrapper>
                     <H2Title>New book release </H2Title>
                     <Text>This spring the 6th August and Clownen book will be release :) <br></br>Until then check out the earlier books August & Clowen books </Text>
@@ -39,7 +44,7 @@ export const LandingPage = () => {
                         <Button>Check out books</Button>
                     </StyledLink>
                 </SectionWrapper>
-               <BookImage src={book} alt="Bok image"/>
+               <BookImage src={book} alt="August clownen book"/>
             </BookContainer> 
             <Wrapper>
                 <SectionContainer>
@@ -63,8 +68,8 @@ export const LandingPage = () => {
                     <Image src={drawing} alt="Clown"/>
                 </SectionContainer>
             </Wrapper>
-            <BookContainer>
-            <BookImage src={highscore}/>
+            <UploadContainer>
+            <BookImage src={highscore} alt="August& Clownen Book image"/>
                <SectionWrapper>
                  <H2Title>Share your drawings</H2Title>
                     <Text> Show the whole world your best August & Clownen drawings. Go to the upload drawings page to make it happend </Text>
@@ -72,9 +77,9 @@ export const LandingPage = () => {
                         <Button>Upload drawing</Button>
                     </StyledLink>
                 </SectionWrapper>
-               <Image src={trapets} alt="Girl"/>
-            </BookContainer> 
-        <EndContainer></EndContainer>
+               <UploadImage src={trapets} alt="Girl"/>
+            </UploadContainer> 
+       
             <Footer/>
         </LandingContainer>
         
