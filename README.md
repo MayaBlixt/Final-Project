@@ -3,7 +3,7 @@ August & Clownen fanpage is a student project developed by Marjaana Tienaho. Aug
 
 The main MVP for this app was the memory game where the user has the possibility to choose between 3 different difficulty levels (easy, medium, hard)
 
-# Future improvements
+## Future improvements
 Extra features such as displaying the username to play with, to see the number of cards selected and if lucky get listed on the high score is currently not fully implemented.
 
 ## How I Built it 🎪
